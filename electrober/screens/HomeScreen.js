@@ -1,11 +1,12 @@
-import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import tw from 'tailwind-react-native-classnames';
+import React from "react";
+import { SafeAreaView, StyleSheet, Text, View, Image } from "react-native";
+import tw from "tailwind-react-native-classnames";
+
 const HomeScreen = () => {
     return (
-     <SafeAreaView style={tw`bg-white-100 h-full`}>
-       <View style= {tw`p-5`}>
-        <Image>
+     <SafeAreaView style={tw`bg-white h-full`}>
+       <View>
+        <Image
          style={{
             width: 100,
              height:100, 
@@ -13,9 +14,9 @@ const HomeScreen = () => {
          }}
           source = {{
                 
-                uri:"https://links.papareact.com/gzs",
+                url:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png",
           }}
-        </Image>
+        />
        </View>
      </SafeAreaView>
 
@@ -26,4 +27,8 @@ const HomeScreen = () => {
 
 export default HomeScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  text: {
+    color: "blue",
+  },
+});

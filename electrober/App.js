@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from "react";
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from "react-native";
 import { Provider } from "react-redux";
 import { store } from "./store";
-import HomeScreen from './screens/HomeScreen';
+import HomeScreen from "./screens/HomeScreen";
 
 // 1) set up redux
 
