@@ -4,13 +4,14 @@ import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { Text } from "react-native-elements";
 import tw from "tailwind-react-native-classnames";
 import Map from "../components/Map";
+import Driverlocation from "../components/Driverlocation";
 
 const MapScreen = (component) => {
     const navigation = useNavigation();
     return (
         <View>
             <View style={tw`h-full`}>
-                <Map />
+                <Driverlocation />
                
                 <TouchableOpacity
                     onPress={() => navigation.navigate("HomeScreen")}

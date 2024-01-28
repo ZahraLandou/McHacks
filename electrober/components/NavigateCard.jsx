@@ -7,9 +7,11 @@ import { useDispatch } from 'react-redux';
 import { setDestination } from '../slices/navSlice';
 import { useNavigation } from '@react-navigation/native';
 
+
 const NavigateCard = () => {
     const dispatch = useDispatch();
     const navigation = useNavigation();
+   
     return (
         <SafeAreaView style={tw`bg-white flex-1`}>
             
@@ -22,6 +24,8 @@ const NavigateCard = () => {
                         returnKeyType={"search"}
                         minLength={2}
                         enablePoweredByContainer={false}
+                        
+                        
                         onPress={(data, details = null) => {
                             dispatch(
                                 setDestination({

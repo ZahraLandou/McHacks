@@ -1,6 +1,8 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import HomeScreen from '../screens/HomeScreen';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import {
     FlatList,
     Image,
@@ -10,6 +12,7 @@ import {
     View
 } from 'react-native';
 import tw from "tailwind-react-native-classnames";
+import NavigateCard from './NavigateCard';
 
 const data = [
     {
@@ -38,7 +41,7 @@ const SURGE_CHARGE_RATE = 1.5;
 const ChargeFull = () => {
     const navigation = useNavigation();
     const [selected, setSelected] = useState(null);
-
+    const Stack = createNativeStackNavigator();
     return (
         <SafeAreaView style={tw`bg-white flex-grow`}>
             <View>
@@ -77,10 +80,12 @@ const ChargeFull = () => {
                     </TouchableOpacity>
                 )}
             />
-
+            
+           
             <View style={tw`mt-auto border-t border-gray-200`}>
                 <TouchableOpacity
                     onPress={() => navigation.navigate("MapScreen")}
+                    
                     style={tw`bg-black py-3 m-3 ${!selected && 'bg-gray-300'}`}
                 >
                     <Text style={tw`text-center text-white text-xl`}>
@@ -93,3 +98,6 @@ const ChargeFull = () => {
 };
 
 export default ChargeFull;
+
+
+//{"description": "McGill University, Sherbrooke Street West, Montreal, QC, Canada", "location": {"lat": 45.50478469999999, "lng": -73.5771511}}

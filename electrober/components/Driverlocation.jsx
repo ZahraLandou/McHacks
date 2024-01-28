@@ -7,10 +7,12 @@ import { selectDestination, selectOrigin } from '../slices/navSlice';
 import MapViewDirections from "react-native-maps-directions";
 import { GOOGLE_MAPS_APIKEY } from "@env";
 
-const Map = () => {
+const Driverlocation = () => {
     const origin = useSelector(selectOrigin);
-    const destination = useSelector(selectDestination);  
-
+  
+    
+    const destination = {"description": "McGill University, Sherbrooke Street West, Montreal, QC, Canada", "location": {"lat": 45.50478469999999, "lng": -73.5771511}};
+  
     return (
         <MapView
             style={tw`flex-1`}
@@ -24,15 +26,16 @@ const Map = () => {
 
           
         >
-            { origin && destination && (
-                <MapViewDirections
-                    origin={origin.description}
-                    destination={destination.description}
-                    apikey={GOOGLE_MAPS_APIKEY}
-                    strokeWidth={3}
-                    strokeColor="black"
-                />
+             { origin && destination && (
+            <MapViewDirections
+                origin={origin.description}
+                destination={destination.description}
+                apikey={GOOGLE_MAPS_APIKEY}
+                strokeWidth={3}
+                strokeColor="black"
+            />
              )}
+
 
 
 
@@ -48,12 +51,24 @@ const Map = () => {
                 />
             )}
 
-            
 
+
+            {destination?.location && (
+                <Marker
+                    coordinate={{
+                        latitude: destination.location.lat,
+                        longitude: destination.location.lng,
+                    }}
+                    
+                    title="Destination"
+                    description={destination.description}
+                    identifier="Destination"
+                />
+          )}
         </MapView>
     );
 };
 
-export default Map;
+export default Driverlocation;
 
 const styles = StyleSheet.create({});
