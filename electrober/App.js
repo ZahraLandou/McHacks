@@ -5,16 +5,18 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import HomeScreen from "./screens/HomeScreen";
 import { SafeAreaProvider} from 'react-native-safe-area-context';
+import {NavigationContainer} from "@react-navigation/native";
 
 // 1) set up redux
 
 export default function App() {
   return (
     <Provider store={store}>
-      <SafeAreaProvider>
-      <HomeScreen />
-      </SafeAreaProvider>
-   
+      <NavigationContainer>
+        <SafeAreaProvider>
+          <HomeScreen />
+        </SafeAreaProvider>
+      </NavigationContainer>
     </Provider>
   );
 }
