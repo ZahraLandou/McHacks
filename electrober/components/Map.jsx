@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import tw from "tailwind-react-native-classnames";
 import { selectDestination, selectOrigin } from '../slices/navSlice';
 import MapViewDirections from "react-native-maps-directions";
+import { GOOGLE_MAPS_APIKEY } from "@env";
 
 const Map = () => {
     const origin = useSelector(selectOrigin);
@@ -27,7 +28,9 @@ const Map = () => {
             <MapViewDirections
                 origin={origin.description}
                 destination={destination.description}
-                
+                apikey={GOOGLE_MAPS_APIKEY}
+                strokeWidth={3}
+                strokeColor="black"
             />
              )}
 

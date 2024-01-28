@@ -12,7 +12,7 @@ const MapScreenChargeFull = (component) => {
             <View style={tw`h-full`}>
                 <Map />
                 <TouchableOpacity
-                    onPress={() => navigation.navigate("ChargeQuick")}
+                    onPress={() => navigation.navigate("ChargeFull")}
                     style={tw`bg-gray-100 absolute top-16 left-60 z-50 p-3 rounded-full shadow-lg`}>
                     <Text>Options</Text>
                 </TouchableOpacity>

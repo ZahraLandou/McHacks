@@ -11,11 +11,7 @@ const MapScreen = (component) => {
         <View>
             <View style={tw`h-full`}>
                 <Map />
-                <TouchableOpacity
-                    onPress={() => navigation.navigate("ChargeQuick")}
-                    style={tw`bg-gray-100 absolute top-16 left-60 z-50 p-3 rounded-full shadow-lg`}>
-                    <Text>Options</Text>
-                </TouchableOpacity>
+               
                 <TouchableOpacity
                     onPress={() => navigation.navigate("HomeScreen")}
                     style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}>
