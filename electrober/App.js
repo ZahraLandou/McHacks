@@ -7,6 +7,8 @@ import HomeScreen from "./screens/HomeScreen";
 import MapScreen from './screens/MapScreen';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from "@react-navigation/native";
+import NavigateCard from "./components/NavigateCard";
+import RideOptionsCard from "./components/RideOptionsCard"
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // 1) set up redux
@@ -38,6 +40,20 @@ export default function App() {
                   headerShown: false,
                   gestureEnabled: true,
                   gestureDirection: "horizontal",
+                }}
+              />
+              <Stack.Screen
+                name="NavigateCard"
+                component={NavigateCard}
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name="RideOptionsCard"
+                component={RideOptionsCard}
+                options={{
+                  headerShown: false,
                 }}
               />
             </Stack.Navigator>
