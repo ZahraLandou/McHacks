@@ -22,7 +22,7 @@ const HomeScreen = () => {
           }}
           source={{
 
-            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png",
+            url: "https://cdn.discordapp.com/attachments/1200848153247756320/1201161218983997550/212aff11b389a27abda87842a1b96cfc-removebg-preview.png?ex=65c8cf8f&is=65b65a8f&hm=77dd1fcab24b0c8c8db222fc48e0443c9e84279e0b1932808289982cdbd636ab&"
           }}
         />
 

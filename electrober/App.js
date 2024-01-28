@@ -10,6 +10,7 @@ import ChargeQuick from "./components/ChargeQuick";
 import MapScreenChargeFull from './screens/MapScreenChargeFull';
 import MapScreenChargeQuick from "./screens/MapScreenChargeQuick";
 import { store } from "./store";
+import MapScreen from "./screens/MapScreen";
 
 
 // import { LogLevel, OneSignal } from 'react-native-onesignal';
@@ -78,6 +79,13 @@ export default function App() {
               <Stack.Screen
                 name="ChargeQuick"
                 component={ChargeQuick}
+                options={{
+                  headerShown: false,
+                }}
+              />
+              <Stack.Screen
+                name="MapScreen"
+                component={MapScreen}
                 options={{
                   headerShown: false,
                 }}

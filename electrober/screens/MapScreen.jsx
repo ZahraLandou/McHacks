@@ -5,7 +5,7 @@ import { Text } from "react-native-elements";
 import tw from "tailwind-react-native-classnames";
 import Map from "../components/Map";
 
-const MapScreenChargeFull = (component) => {
+const MapScreen = (component) => {
     const navigation = useNavigation();
     return (
         <View>
@@ -21,10 +21,11 @@ const MapScreenChargeFull = (component) => {
                     style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}>
                     <Text>Back</Text>
                 </TouchableOpacity>
+
             </View>
         </View>
     );
 };
 
-export default MapScreenChargeFull;
+export default MapScreen;
 const styles = StyleSheet.create({});

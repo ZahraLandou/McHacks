@@ -10,13 +10,13 @@ const data = [
     {
         id: "123",
         title: "Charge Full",
-        image: "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_485,h_385/f_auto,q_auto/products/carousel/UberX.png",
+        image: "https://cdn-icons-png.flaticon.com/512/6747/6747599.png",
         screen: "MapScreenChargeFull",
     },
     {
         id: "456",
         title: "Charge Quick",
-        image: "https://i.pinimg.com/originals/4f/eb/74/4feb745209cf7aba57463b20d27b61e3.png",
+        image: "https://cdn-icons-png.flaticon.com/512/4025/4025181.png",
         screen: "MapScreenChargeQuick", //change in future...
     },
 ];

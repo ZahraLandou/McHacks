@@ -30,7 +30,7 @@ const NavigateCard = () => {
                                     location: details.geometry.location,
                                     descritpion: data.description,
                                 }));
-                            // navigation.navigate('RideOptionsCard');
+                            navigation.navigate('RideOptionsCard');
                         }}
                         query={{
                             key: GOOGLE_MAPS_APIKEY,

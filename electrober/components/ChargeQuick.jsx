@@ -15,19 +15,19 @@ const data = [
         id: 'Now',
         title: 'Now',
         price: 5,
-        image: 'https://links.papareact.com/3pn',
+        image:  "https://static.vecteezy.com/system/resources/previews/000/623/239/original/auto-car-logo-template-vector-icon.jpg",
     },
     {
         id: 'In 1 hour',
         title: 'In 1 hour',
         price: 3,
-        image: 'https://links.papareact.com/5w8',
+        image: "https://static.vecteezy.com/system/resources/previews/000/623/239/original/auto-car-logo-template-vector-icon.jpg",
     },
     {
         id: 'In 2 hours',
         title: 'In 2 hours',
         price: 2,
-        image: 'https://links.papareact.com/7pf',
+        image: "https://static.vecteezy.com/system/resources/previews/000/623/239/original/auto-car-logo-template-vector-icon.jpg",
     },
 ];
 
@@ -79,7 +79,7 @@ const ChargeQuick = () => {
 
             <View style={tw`mt-auto border-t border-gray-200`}>
                 <TouchableOpacity
-                    disabled={!selected}
+                    onPress={() => navigation.navigate("MapScreen")}
                     style={tw`bg-black py-3 m-3 ${!selected && 'bg-gray-300'}`}
                 >
                     <Text style={tw`text-center text-white text-xl`}>

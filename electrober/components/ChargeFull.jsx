@@ -1,5 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
+import HomeScreen from '../screens/HomeScreen';
 import {
     FlatList,
     Image,
@@ -15,19 +16,19 @@ const data = [
         id: 'Now',
         title: 'Now',
         price: 10,
-        image: 'https://links.papareact.com/3pn',
+        image: "https://static.vecteezy.com/system/resources/previews/000/623/239/original/auto-car-logo-template-vector-icon.jpg",
     },
     {
         id: 'In 1 hour',
         title: 'In 1 hour',
         price: 7,
-        image: 'https://links.papareact.com/5w8',
+        image: "https://static.vecteezy.com/system/resources/previews/000/623/239/original/auto-car-logo-template-vector-icon.jpg",
     },
     {
         id: 'In 2 hours',
         title: 'In 2 hours',
         price: 5,
-        image: 'https://links.papareact.com/7pf',
+        image: "https://static.vecteezy.com/system/resources/previews/000/623/239/original/auto-car-logo-template-vector-icon.jpg",
     },
 ];
 
@@ -79,7 +80,7 @@ const ChargeFull = () => {
 
             <View style={tw`mt-auto border-t border-gray-200`}>
                 <TouchableOpacity
-                    disabled={!selected}
+                    onPress={() => navigation.navigate("MapScreen")}
                     style={tw`bg-black py-3 m-3 ${!selected && 'bg-gray-300'}`}
                 >
                     <Text style={tw`text-center text-white text-xl`}>

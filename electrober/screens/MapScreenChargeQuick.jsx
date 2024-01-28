@@ -19,7 +19,7 @@ const MapScreenChargeQuick = (component) => {
                 <TouchableOpacity
                     onPress={() => navigation.navigate("HomeScreen")}
                     style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}>
-                    <Text>HomeScreen</Text>
+                    <Text>Back</Text>
                 </TouchableOpacity>
             </View>
         </View>
