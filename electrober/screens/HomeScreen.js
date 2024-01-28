@@ -3,65 +3,68 @@ import { SafeAreaView, StyleSheet, Text, View, Image } from "react-native";
 import tw from "tailwind-react-native-classnames";
 import NavOptions from "../components/NavOptions";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
-import {GOOGLE_MAPS_APIKEY} from "@env";
+import { GOOGLE_MAPS_APIKEY } from "@env";
 import { useDispatch } from "react-redux";
-import { setDestination,setOrigin } from "../slices/navSlice";
+import { setDestination, setOrigin } from "../slices/navSlice";
+
+console.log(GOOGLE_MAPS_APIKEY)
 
 const HomeScreen = () => {
-    const dispatch = useDispatch();
-    return (
-     <SafeAreaView style={tw`bg-white h-full`}>
-       <View style = {tw`p-5`}>
+  const dispatch = useDispatch();
+  return (
+    <SafeAreaView style={tw`bg-white h-full`}>
+      <View style={tw`p-5`}>
         <Image
-         style={{
+          style={{
             width: 100,
-             height:100, 
-             resizeMode:'contain',
-         }}
-          source = {{
-                
-                url:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png",
+            height: 100,
+            resizeMode: 'contain',
+          }}
+          source={{
+
+            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png",
           }}
         />
 
         <GooglePlacesAutocomplete
           placeholder="Where are you?"
-          styles = {{
+          styles={{
             container: {
               flex: 0,
             },
-            textInput:{
+            textInput: {
               fontSize: 18,
             },
           }}
-          onPress={(data,details = null) => {
+          onPress={(data, details = null) => {
             dispatch(
               setOrigin({
-              location: details.geometry.location,
-              description: data.description,
-            }))
+                location: details.geometry.location,
+                description: data.description,
+              }))
             dispatch(setDestination(null));
+            console.log('onPress', data);
           }}
           fetchDetails={true}
-          returnKeyType = {"search"}
+          returnKeyType={"search"}
           enablePoweredByContainer={false}
-          minLength ={2}
+          minLength={2}
           query={{
             key: GOOGLE_MAPS_APIKEY,
             language: "en",
           }}
           nearbyPlacesAPI="GooglePlacesSearch"
           debounce={400}
-        
+
         />
 
-        <NavOptions/>
-       </View>
-     </SafeAreaView>
+        <NavOptions />
+      </View>
+    </SafeAreaView>
 
 
-    );
-  
+  );
+
 };
 
 export default HomeScreen;
