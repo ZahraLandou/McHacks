@@ -11,7 +11,24 @@ import MapScreenChargeFull from './screens/MapScreenChargeFull';
 import MapScreenChargeQuick from "./screens/MapScreenChargeQuick";
 import { store } from "./store";
 
-// 1) set up redux
+
+// import { LogLevel, OneSignal } from 'react-native-onesignal';
+
+// OneSignal.Debug.setLogLevel(LogLevel.Verbose);
+// OneSignal.initialize("be61b788-49df-4027-a624-0f6507b475f5");
+
+// // Also need enable notifications to complete OneSignal setup
+// OneSignal.Notifications.requestPermission(true);
+
+// "plugins": [
+//   [
+//     "onesignal-expo-plugin",
+//     {
+//       "mode": "development"
+//     }
+//   ]
+// ]
+
 
 export default function App() {
 
