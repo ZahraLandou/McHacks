@@ -1,21 +1,21 @@
-import React from 'react';
-import { FlatList, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import tw from "tailwind-react-native-classnames";
-import { Icon } from "react-native-elements";
 import { useNavigation } from '@react-navigation/native';
-import { selectOrigin } from '../slices/navSlice';
+import React from 'react';
+import { FlatList, Image, Text, TouchableOpacity, View } from 'react-native';
+import { Icon } from "react-native-elements";
 import { useSelector } from "react-redux";
+import tw from "tailwind-react-native-classnames";
+import { selectOrigin } from '../slices/navSlice';
 
 const data = [
     {
         id: "123",
-        title: "Get a rid",
+        title: "Charge Full",
         image: "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_485,h_385/f_auto,q_auto/products/carousel/UberX.png",
         screen: "MapScreen",
     },
     {
         id: "456",
-        title: "Order food",
+        title: "Charge Quick",
         image: "https://i.pinimg.com/originals/4f/eb/74/4feb745209cf7aba57463b20d27b61e3.png",
         screen: "EatsScreen", //change in future...
     },

@@ -1,10 +1,10 @@
+import { GOOGLE_MAPS_APIKEY } from "@env";
 import React from "react";
-import { SafeAreaView, StyleSheet, Text, View, Image } from "react-native";
+import { Image, SafeAreaView, StyleSheet, View } from "react-native";
+import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
+import { useDispatch } from "react-redux";
 import tw from "tailwind-react-native-classnames";
 import NavOptions from "../components/NavOptions";
-import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
-import { GOOGLE_MAPS_APIKEY } from "@env";
-import { useDispatch } from "react-redux";
 import { setDestination, setOrigin } from "../slices/navSlice";
 
 console.log(GOOGLE_MAPS_APIKEY)

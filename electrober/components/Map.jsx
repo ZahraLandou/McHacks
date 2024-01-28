@@ -7,6 +7,7 @@ import { selectOrigin } from '../slices/navSlice';
 
 const Map = () => {
     const origin = useSelector(selectOrigin);
+
     return (
         <MapView
             style={tw`flex-1`}
