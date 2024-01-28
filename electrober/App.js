@@ -4,9 +4,11 @@ import React from "react";
 import { KeyboardAvoidingView, Platform, StyleSheet } from "react-native";
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from "react-redux";
-import RideOptionsCard from "./components/RideOptionsCard";
+import ChargeFull from "./components/ChargeFull";
 import HomeScreen from "./screens/HomeScreen";
-import MapScreen from './screens/MapScreen';
+import ChargeQuick from "./components/ChargeQuick";
+import MapScreenChargeFull from './screens/MapScreenChargeFull';
+import MapScreenChargeQuick from "./screens/MapScreenChargeQuick";
 import { store } from "./store";
 
 // 1) set up redux
@@ -32,24 +34,33 @@ export default function App() {
                 }}
               />
               <Stack.Screen
-                name='MapScreen'
-                component={MapScreen}
+                name='MapScreenChargeFull'
+                component={MapScreenChargeFull}
                 options={{
                   headerShown: false,
                   gestureEnabled: true,
                   gestureDirection: "horizontal",
                 }}
               />
-              {/* <Stack.Screen
-                name="NavigateCard"
-                component={NavigateCard}
+              <Stack.Screen
+                name="ChargeFull"
+                component={ChargeFull}
                 options={{
                   headerShown: false,
                 }}
-              /> */}
+              />
               <Stack.Screen
-                name="RideOptionsCard"
-                component={RideOptionsCard}
+                name='MapScreenChargeQuick'
+                component={MapScreenChargeQuick}
+                options={{
+                  headerShown: false,
+                  gestureEnabled: true,
+                  gestureDirection: "horizontal",
+                }}
+              />
+              <Stack.Screen
+                name="ChargeQuick"
+                component={ChargeQuick}
                 options={{
                   headerShown: false,
                 }}

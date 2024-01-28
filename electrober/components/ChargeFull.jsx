@@ -34,7 +34,7 @@ const data = [
 // If we have SURGE pricing, this goes up
 const SURGE_CHARGE_RATE = 1.5;
 
-const RideOptionsCard = () => {
+const ChargeFull = () => {
     const navigation = useNavigation();
     const [selected, setSelected] = useState(null);
 
@@ -91,4 +91,4 @@ const RideOptionsCard = () => {
     );
 };
 
-export default RideOptionsCard;
+export default ChargeFull;
