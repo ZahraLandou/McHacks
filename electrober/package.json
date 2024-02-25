@@ -16,7 +16,7 @@
     "@reduxjs/toolkit": "^2.1.0",
     "expo": "^49.0.23",
     "expo-status-bar": "~1.11.1",
-    "npx": "^3.0.0",
+    "npx": "^10.2.2",
     "onesignal-expo-plugin": "^1.1.2",
     "react": "18.2.0",
     "react-native": "^0.73.2",
